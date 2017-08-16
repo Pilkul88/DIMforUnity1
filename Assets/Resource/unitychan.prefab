@@ -2499,7 +2499,10 @@ GameObject:
   - component: {fileID: 95040398375087684}
   - component: {fileID: 54486996789651582}
   - component: {fileID: 136479115084319754}
-  - component: {fileID: 114383244400567946}
+  - component: {fileID: 135086490371422170}
+  - component: {fileID: 114476602715748478}
+  - component: {fileID: 114723159645042246}
+  - component: {fileID: 114141346075057106}
   m_Layer: 0
   m_Name: unitychan
   m_TagString: Untagged
@@ -3885,7 +3888,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976505634463002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -7.52}
+  m_LocalPosition: {x: 0, y: 0.71, z: -7.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4617102536004458}
@@ -3981,7 +3984,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1410305429842752}
-  m_LocalRotation: {x: -0.093746535, y: 0.6978551, z: 0.707469, w: 0.060806744}
+  m_LocalRotation: {x: -0.093746535, y: 0.6978551, z: 0.707469, w: 0.060806707}
   m_LocalPosition: {x: -0.05543403, y: 0.0017306843, z: 0.098653734}
   m_LocalScale: {x: 1.0000004, y: 1.0000006, z: 1.0000005}
   m_Children:
@@ -4567,13 +4570,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1284013143560604}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.79, z: -2.67}
+  m_LocalRotation: {x: 0.07914637, y: -0, z: -0, w: 0.996863}
+  m_LocalPosition: {x: 0, y: 2.2, z: -2.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4603302301510026}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.079, y: 0, z: 0}
 --- !u!4 &4853400307897756
 Transform:
   m_ObjectHideFlags: 1
@@ -5156,7 +5159,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114383244400567946
+--- !u!114 &114141346075057106
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -5164,10 +5167,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 1976505634463002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa85d3f715b78214ea1cbb0b1f83e72f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9df4b1ce9e558be4aa2f769df54d7742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 0.1
+--- !u!114 &114476602715748478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976505634463002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b67db9dfdd14b1478416cdf953124e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animations:
+  - isRunning
+  - isWalkback
+  - isJump
+  - isSliding
+--- !u!114 &114723159645042246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976505634463002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e976de828b1f249b1d81db15401f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forward_speed: 0.1
+  back_speed: 0.01
+  slide_speed: 0.01
+  isRun: 0
+  isBack: 0
+  isJump: 0
+  isSliding: 0
 --- !u!124 &124436318778335024
 Behaviour:
   m_ObjectHideFlags: 1
@@ -5175,6 +5211,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1284013143560604}
   m_Enabled: 1
+--- !u!135 &135086490371422170
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976505634463002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.28707504
+  m_Center: {x: 0, y: 1.5, z: 0.056373596}
 --- !u!136 &136479115084319754
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -5184,8 +5232,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.24961519
-  m_Height: 1.6993632
+  m_Radius: 0.25
+  m_Height: 1.7
   m_Direction: 1
   m_Center: {x: 0, y: 0.79999995, z: -0.06717634}
 --- !u!136 &136737584901648842

@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 411814}
   - component: {fileID: 3311814}
   - component: {fileID: 2311814}
+  - component: {fileID: 65562054248538298}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -249,3 +250,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 111808}
   m_IsPrefabParent: 1
+--- !u!65 &65562054248538298
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 183.22702, y: 150.0637, z: 150}
+  m_Center: {x: 0, y: -75.03184, z: 75}

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FDED8FCD-A6F3-ECFE-ECD8-9861EBC27D95}</ProjectGuid>
+    <ProjectGuid>{9F87A899-2D24-153A-EB64-BD53F3A6D086}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,7 +53,9 @@
   <ItemGroup>
      <Compile Include="Assets\block.cs" />
      <Compile Include="Assets\GrassRoadRace\Script\CameraMove.cs" />
-     <Compile Include="Assets\Unitychan.cs" />
+     <Compile Include="Assets\Scripts\UnityChan_Input.cs" />
+     <Compile Include="Assets\Scripts\UnityChan_Model.cs" />
+     <Compile Include="Assets\Scripts\UnityChan_View.cs" />
      <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
      <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
      <Compile Include="Assets\UnityChan\Scripts\IdleChanger.cs" />
