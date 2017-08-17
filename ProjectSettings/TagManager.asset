@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Goal
+  - SpeedUp
+  - SpeedDown
+  - Obstacle
+  - Ride
+  - Fall
   layers:
   - Default
   - TransparentFX

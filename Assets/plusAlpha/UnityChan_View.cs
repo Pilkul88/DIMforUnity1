@@ -16,9 +16,10 @@ public class UnityChan_View : MonoBehaviour {
 
 	//前に進む処理
 	IEnumerator Run(){
-		float speed = GetComponent<UnityChan_Model> ().forward_speed;
+		//float speed = GetComponent<UnityChan_Model> ().forward_speed;
 		bool isRun = GetComponent<UnityChan_Model> ().isRun;
 		while (isRun) {
+			float speed = GetComponent<UnityChan_Model> ().forward_speed;
 			transform.position += new Vector3 (0, 0, speed);
 			isRun = GetComponent<UnityChan_Model> ().isRun;
 			yield return new WaitForSeconds (0.01f);
@@ -49,6 +50,7 @@ public class UnityChan_View : MonoBehaviour {
 		GetComponent<SphereCollider> ().isTrigger = false;
 
 		yield return new WaitForSeconds (1.0f);
+
 		animator.SetBool ("isJump", false);
 		GetComponent<Rigidbody> ().useGravity = true;
 		GetComponent<CapsuleCollider> ().isTrigger = false;

@@ -68,12 +68,9 @@ public class UnityChan_Input : MonoBehaviour {
 	//スペースキーを押したときの処理
 	void pushSpace(){
 		bool isRun = GetComponent<UnityChan_Model> ().isRun;
-
-		if (isRun) {
-			GetComponent<UnityChan_View> ().ChangeOneAnimation ("isJump");
-			GetComponent<UnityChan_Model> ().isJump = true;
-			GetComponent<UnityChan_View> ().StartCoroutine ("Jump");
-		}
+		GetComponent<UnityChan_View> ().ChangeOneAnimation ("isJump");
+		GetComponent<UnityChan_Model> ().isJump = true;
+		GetComponent<UnityChan_View> ().StartCoroutine ("Jump");
 	}
 
 }

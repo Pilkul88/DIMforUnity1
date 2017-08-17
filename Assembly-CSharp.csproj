@@ -53,9 +53,12 @@
   <ItemGroup>
      <Compile Include="Assets\block.cs" />
      <Compile Include="Assets\GrassRoadRace\Script\CameraMove.cs" />
-     <Compile Include="Assets\Scripts\UnityChan_Input.cs" />
+     <Compile Include="Assets\MoveBlock.cs" />
+     <Compile Include="Assets\plusAlpha\manager.cs" />
+     <Compile Include="Assets\plusAlpha\Unitychan_Collision.cs" />
+     <Compile Include="Assets\plusAlpha\UnityChan_Input.cs" />
+     <Compile Include="Assets\plusAlpha\UnityChan_View.cs" />
      <Compile Include="Assets\Scripts\UnityChan_Model.cs" />
-     <Compile Include="Assets\Scripts\UnityChan_View.cs" />
      <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
      <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
      <Compile Include="Assets\UnityChan\Scripts\IdleChanger.cs" />
